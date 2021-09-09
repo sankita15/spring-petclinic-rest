@@ -1,0 +1,8 @@
+spring:
+  application: {name: 'spring-petclinic-rest'}
+  cloud:
+    consul:
+      enabled: 'true'
+      host: http://localhost
+      port: 8500
+      discovery: {healthCheckInterval: 300s}

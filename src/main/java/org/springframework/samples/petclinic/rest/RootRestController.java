@@ -21,6 +21,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,6 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(exposedHeaders = "errors, content-type")
 @RequestMapping("/")
+@RefreshScope
 public class RootRestController {
 
     @Value("#{servletContext.contextPath}")
