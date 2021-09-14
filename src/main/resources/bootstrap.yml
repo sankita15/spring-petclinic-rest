@@ -1,8 +1,12 @@
 spring:
-  application: {name: 'spring-petclinic-rest'}
+  application:
+    name: spring-petclinic-rest
   cloud:
     consul:
-      enabled: 'true'
       host: localhost
       port: 8500
-      discovery: {healthCheckInterval: 300s}
+      config:
+        enabled: true
+        discovery:
+          healthCheckInterval: 300s
+          instance-id: hola-2021
