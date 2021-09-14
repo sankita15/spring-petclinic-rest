@@ -3,6 +3,6 @@ spring:
   cloud:
     consul:
       enabled: 'true'
-      host: http://localhost
+      host: localhost
       port: 8500
       discovery: {healthCheckInterval: 300s}
