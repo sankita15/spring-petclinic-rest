@@ -9,4 +9,4 @@ spring:
         enabled: true
         discovery:
           healthCheckInterval: 300s
-          instance-id: hola-2021
+          instanceId: 'hola:2021'
