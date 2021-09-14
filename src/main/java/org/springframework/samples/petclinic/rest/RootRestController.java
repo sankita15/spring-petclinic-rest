@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,6 +40,14 @@ public class RootRestController {
 
     @Value("#{servletContext.contextPath}")
     private String servletContextPath;
+
+    @Value("${greeting}")
+    private String greeting;
+
+    @GetMapping("/keys")
+    public String getName() {
+        return "Config data "+ greeting;
+    }
 
 	@RequestMapping(value = "/")
 	public void redirectToSwagger(HttpServletResponse response) throws IOException {
