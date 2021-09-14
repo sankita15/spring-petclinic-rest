@@ -41,14 +41,6 @@ public class RootRestController {
     @Value("#{servletContext.contextPath}")
     private String servletContextPath;
 
-    @Value("${greeting}")
-    private String greeting;
-
-    @GetMapping("/keys")
-    public String getName() {
-        return "Config data "+ greeting;
-    }
-
 	@RequestMapping(value = "/")
 	public void redirectToSwagger(HttpServletResponse response) throws IOException {
 		response.sendRedirect(this.servletContextPath + "/swagger-ui.html");
