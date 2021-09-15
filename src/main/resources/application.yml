@@ -17,6 +17,7 @@ spring:
 server:
   servlet:
     context-path: /petclinicapi/
+  port: 9967
 logging:
   level:
     org:
