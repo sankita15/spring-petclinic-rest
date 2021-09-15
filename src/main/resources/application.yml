@@ -7,6 +7,9 @@ spring:
       port: 8500
       config:
         enabled: true
+        prefix: config/application
+        defaultContext: apps
+        profileSeparator: '::'
       discovery:
         instanceId: ${spring.application.name}:${random.value}
         healthCheckInterval: 20s
