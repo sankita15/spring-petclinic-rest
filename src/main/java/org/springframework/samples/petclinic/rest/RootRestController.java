@@ -38,6 +38,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class RootRestController {
 
+    @Value("${greeting}")
+    private String greeting;
+
+    @GetMapping("/keys")
+    public String getName() {
+        return "Config data "+ greeting;
+    }
+
     @Value("#{servletContext.contextPath}")
     private String servletContextPath;
 
