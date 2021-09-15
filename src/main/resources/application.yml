@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: hsqldb,spring-data-jpa
   cloud:
     consul:
       host: localhost
